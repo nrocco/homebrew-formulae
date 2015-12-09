@@ -1,9 +1,9 @@
 class Consume < Formula
   desc "wrapper around HTTPie for friendly rest api consumption"
   homepage "http://nrocco.github.io"
-  url "https://github.com/nrocco/consume/archive/1.1.2.tar.gz"
-  version "1.1.2"
-  sha256 "11661f2ebd891ff72cd062427beeffa577f19cfde27f02a11eabcdf92ce25c23"
+  url "https://github.com/nrocco/consume/archive/1.1.3.tar.gz"
+  version "1.1.3"
+  sha256 "ff7ea7c73ab18382ed6b052122f0918c60855422a5be320b95170ffcfcd6cbd2"
 
   def install
     system "make", "install", "prefix=#{prefix}"
