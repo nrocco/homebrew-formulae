@@ -3,9 +3,9 @@ class Ide < Formula
   homepage "http://nrocco.github.io"
   head "https://github.com/nrocco/ide.git"
 
-  # def install
-  #   system "make", "install", "prefix=#{prefix}"
-  # end
+  def install
+    system "make", "install", "prefix=#{prefix}"
+  end
 
   test do
     system "false"
