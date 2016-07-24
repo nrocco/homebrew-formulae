@@ -1,9 +1,9 @@
 class Photonizer < Formula
   desc "a command line tool to organize photos using plain files and folders."
   homepage "http://nrocco.github.io"
-  url "https://github.com/nrocco/photonizer/archive/0.3.0.tar.gz"
-  version "0.3.0"
-  sha256 "7b530dc2f04e97fe985c40b13abcd9923211eb2235eb57d3207ac2db2128aa57"
+  url "https://github.com/nrocco/photonizer/archive/0.4.0.tar.gz"
+  version "0.4.0"
+  sha256 "56e5cbae8b8b8b9ae47c60dbc3e579c44c743ed2a497fcea46cde3b3984d3751"
 
   depends_on :python3
 
