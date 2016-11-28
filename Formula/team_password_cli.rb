@@ -1,9 +1,9 @@
 class TeamPasswordCli < Formula
   desc "A Team Password Manager CLI Application"
   homepage "http://nrocco.github.io"
-  url "https://github.com/nrocco/team_password_cli/archive/0.1.0.tar.gz"
-  version "0.1.0"
-  sha256 "016ab75745512919282ca614f065157929281ca9b956c9858ff302a211e5c2a3"
+  url "https://github.com/nrocco/team_password_cli/archive/0.1.1.tar.gz"
+  version "0.1.1"
+  sha256 "df2b5eadecc876429efbaa826b63203fc2a5c03a08808c4637a4251f0847f1be"
 
   depends_on :python3
 
