@@ -1,6 +1,6 @@
 class Ide < Formula
   desc "ide provides a powerful ide that gets out of your way"
-  homepage "http://nrocco.github.io"
+  homepage "https://github.com/nrocco/ide"
   head "https://github.com/nrocco/ide.git"
 
   def install
