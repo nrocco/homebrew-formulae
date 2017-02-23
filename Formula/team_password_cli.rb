@@ -1,36 +1,36 @@
 class TeamPasswordCli < Formula
   desc "A Team Password Manager CLI Application"
   homepage "http://nrocco.github.io"
-  url "https://github.com/nrocco/team_password_cli/archive/0.1.1.tar.gz"
-  version "0.1.1"
-  sha256 "df2b5eadecc876429efbaa826b63203fc2a5c03a08808c4637a4251f0847f1be"
+  url "https://pypi.python.org/packages/51/c4/ffa5389298611abc6b62f058ab32a1a36e294e45402e5cecf89bdfc8cee1/team_password_cli-1.0.1.tar.gz"
+  version "1.0.1"
+  sha256 "9e4a7326be561af2b924afa16a6033e178005255bed7f2dfa29621f08324567f"
 
   depends_on :python3
 
-  resource "pycli_tools" do
-    url "https://pypi.python.org/packages/78/ef/9a4133c6625d844f53fa7a9a2945a800dd1eebc551831f0b90373bae555b/pycli_tools-2.0.2.tar.gz"
-    sha256 "6ffafa63d24969510b16d5861ea01572b06de2531751f9b59237054c7c8b3e5b"
+  resource "click" do
+    url "https://pypi.python.org/packages/95/d9/c3336b6b5711c3ab9d1d3a80f1a3e2afeb9d8c02a7166462f6cc96570897/click-6.7.tar.gz"
+    sha256 "f15516df478d5a56180fbf80e68f206010e6d160fc39fa508b65e035fd75130b"
   end
 
   resource "requests" do
-    url "https://pypi.python.org/packages/2e/ad/e627446492cc374c284e82381215dcd9a0a87c4f6e90e9789afefe6da0ad/requests-2.11.1.tar.gz"
-    sha256 "5acf980358283faba0b897c73959cecf8b841205bb4b2ad3ef545f46eae1a133"
+    url "https://pypi.python.org/packages/16/09/37b69de7c924d318e51ece1c4ceb679bf93be9d05973bb30c35babd596e2/requests-2.13.0.tar.gz"
+    sha256 "5722cd09762faa01276230270ff16af7acf7c5c45d623868d9ba116f15791ce8"
   end
 
   resource "tabulate" do
-    url "https://pypi.python.org/packages/db/40/6ffc855c365769c454591ac30a25e9ea0b3e8c952a1259141f5b9878bd3d/tabulate-0.7.5.tar.gz"
-    sha256 "9071aacbd97a9a915096c1aaf0dc684ac2672904cd876db5904085d6dac9810e"
+    url "https://pypi.python.org/packages/1c/a1/3367581782ce79b727954f7aa5d29e6a439dc2490a9ac0e7ea0a7115435d/tabulate-0.7.7.tar.gz"
+    sha256 "83a0b8e17c09f012090a50e1e97ae897300a72b35e0c86c0b53d3bd2ae86d8c6"
   end
 
   def install
-    ENV.prepend_create_path "PYTHONPATH", libexec/"vendor/lib/python3.5/site-packages"
+    ENV.prepend_create_path "PYTHONPATH", libexec/"vendor/lib/python3.6/site-packages"
     resources.each do |r|
       r.stage do
         system "python3", *Language::Python.setup_install_args(libexec/"vendor")
       end
     end
 
-    ENV.prepend_create_path "PYTHONPATH", libexec/"lib/python3.5/site-packages"
+    ENV.prepend_create_path "PYTHONPATH", libexec/"lib/python3.6/site-packages"
     system "python3", *Language::Python.setup_install_args(libexec)
 
     bin.install Dir["#{libexec}/bin/*"]
