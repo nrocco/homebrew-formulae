@@ -10,6 +10,7 @@ class Ide < Formula
   def install
       bin.install "ide"
       bin.install "rgit"
+      zsh_completion.install "completion.zsh" => "_ide"
   end
 
   test do
