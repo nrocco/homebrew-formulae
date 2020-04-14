@@ -1,5 +1,5 @@
 class Ide < Formula
-  desc "A powerful ide that gets out of your way"
+  desc "Powerful ide that gets out of your way"
   homepage "https://github.com/nrocco/ide"
   url "https://github.com/nrocco/ide/releases/download/v0.9.16/ide-v0.9.16-darwin-amd64.tar.gz"
 
