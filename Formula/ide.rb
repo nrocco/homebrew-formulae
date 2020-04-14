@@ -1,19 +1,27 @@
 class Ide < Formula
-  desc "ide provides a powerful ide that gets out of your way"
+  desc "A powerful ide that gets out of your way"
   homepage "https://github.com/nrocco/ide"
-  url "https://github.com/nrocco/ide/releases/download/0.9.10/ide-0.9.10-darwin-amd64.tar.gz"
+  url "https://github.com/nrocco/ide/releases/download/v0.9.16/ide-v0.9.16-darwin-amd64.tar.gz"
 
-  version "0.9.10"
+  version "0.9.16"
 
-  sha256 "85444f181b91550d9779918c0f013bfc7850060178785e58bf8460b889e3094c"
+  sha256 "89366aec890b60e4e528809da93fb68985fa3d90a9770a130b53335ef1c94af1"
+
+  bottle :unneeded
+
+  depends_on "git"
+  depends_on "universal-ctags"
 
   def install
-      bin.install "ide"
-      bin.install "rgit"
-      zsh_completion.install "completion.zsh" => "_ide"
+    bin.install "bin/compare"
+    bin.install "bin/ide"
+    bin.install "bin/linter"
+    bin.install "bin/rgit"
+
+    zsh_completion.install "completion.zsh" => "_ide"
   end
 
   test do
-    system "false"
+    assert_match "Version: #{version}", shell_output("#{bin}/ide version")
   end
 end
