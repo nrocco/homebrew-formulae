@@ -7,8 +7,6 @@ class Ide < Formula
 
   sha256 "89366aec890b60e4e528809da93fb68985fa3d90a9770a130b53335ef1c94af1"
 
-  bottle :unneeded
-
   depends_on "git"
   depends_on "universal-ctags"
 
